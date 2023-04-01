@@ -332,6 +332,7 @@ def accuse():
         print("That is incorrect.")
         print("All of a sudden, the lights in the room went out!")
         print("In the darkness, you were killed, and the murderer went on to see another day of murder...")
+        print("Solution-", killer)
         play = o
 
 def elim():
@@ -601,9 +602,13 @@ def main():
             break
      
     dst()
-    print('You were at a dinner party when the host, Mr. Bohdy, was found murdered.')
-    print("It's now your job to find out who did it")
+    print('You were at a dinner party when the host, Mr. Bohdy, was found murdered!')
+    print("It's now your job to find out who did it.")
     print("If you don't know the rules of Clue, learn them.")
+    print("Use sheet to eliminate suspects.")
+    print("Use ask to gather information from other people.")
+    print("Use move tp go to different rooms.")
+    print("And once you've reached a conclusion: use ACCUSE to find out who did it.")
     print(f"You are in- {imhere}")
     print(f'Your hand is- {phand}')
     while play == x:
