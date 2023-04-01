@@ -327,6 +327,7 @@ def accuse():
         print("The culprit was arrested, and you went home safe.")
         print("Congratulations!!")
         play = o
+        return play
         
     else:
         print("That is incorrect.")
@@ -334,6 +335,8 @@ def accuse():
         print("In the darkness, you were killed, and the murderer went on to see another day of murder...")
         print("Solution-", killer)
         play = o
+        return play
+    
 
 def elim():
     doors = x
@@ -570,6 +573,7 @@ def main():
     killer.append(people.pop((random.randint(0, len(people)-1))))
     killer.append(places.pop((random.randint(0, len(places)-1))))
     killer.append(things.pop((random.randint(0, len(things)-1))))
+    print(killer)
     while len(people) > 0:
         sus.append(people.pop((random.randint(0, len(people)-1))))
         
@@ -611,6 +615,7 @@ def main():
     print("And once you've reached a conclusion: use ACCUSE to find out who did it.")
     print(f"You are in- {imhere}")
     print(f'Your hand is- {phand}')
+    
     while play == x:
         action = input("What would you like to do?(ask, move, sheet, accuse)  ")
         if action == 'move':
@@ -624,9 +629,13 @@ def main():
             
         elif action == 'accuse':
             accuse()
+            break
                 
         else:
             print("I don't understand")
+            
+            
+    
 
 #main
 play = x
