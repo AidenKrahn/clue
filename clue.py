@@ -573,7 +573,6 @@ def main():
     killer.append(people.pop((random.randint(0, len(people)-1))))
     killer.append(places.pop((random.randint(0, len(places)-1))))
     killer.append(things.pop((random.randint(0, len(things)-1))))
-    print(killer)
     while len(people) > 0:
         sus.append(people.pop((random.randint(0, len(people)-1))))
         
